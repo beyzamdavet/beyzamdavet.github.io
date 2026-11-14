@@ -103,14 +103,20 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,253,.95);bac
 .card p{color:var(--muted);font-size:.96rem;font-weight:300}
 .card a{display:inline-block;margin-top:16px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px}
 
-/* salonlar */
-.hall{text-align:left;position:relative}
-.hall .ph{aspect-ratio:4/3;height:auto;font-family:var(--serif);font-size:1.5rem;letter-spacing:.06em;text-transform:none}
-.hall .cap{position:absolute;top:16px;left:16px;z-index:2;background:var(--paper);padding:8px 14px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
-.hall .cap b{font-family:var(--serif);font-size:1.25rem;color:var(--gold);letter-spacing:0;margin-right:4px}
-.hall ul{list-style:none;margin-top:14px;border-top:1px solid var(--line);padding-top:12px;font-size:.9rem;color:var(--muted)}
-.hall li{padding:3px 0 3px 18px;position:relative}
-.hall li::before{content:"";position:absolute;left:0;top:.78em;width:8px;height:1px;background:var(--gold)}
+/* salonlar: dikey videolu kartlar */
+.hall{position:relative;aspect-ratio:9/16;overflow:hidden;background:linear-gradient(160deg,#566064,#2f3639);color:#fff;text-align:left;display:flex;flex-direction:column;justify-content:space-between;transition:.3s}
+.hall:hover{transform:translateY(-6px);box-shadow:0 26px 50px -26px rgba(40,46,49,.7)}
+.hall video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hall::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,35,38,.72) 0%,rgba(30,35,38,.08) 30%,rgba(30,35,38,.1) 48%,rgba(30,35,38,.9) 100%)}
+.hall>div{position:relative;z-index:2;padding:26px 26px 28px}
+.hall h3{font-size:clamp(2rem,3vw,2.6rem);line-height:1.05;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.hall .cap{display:inline-block;margin-top:12px;background:var(--gold);padding:6px 14px;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.hall p{font-size:.95rem;font-weight:300;color:#f1eaec}
+.hall ul{list-style:none;margin:12px 0 18px;font-size:.84rem;color:#e6dfe2;display:flex;flex-wrap:wrap;gap:4px 16px}
+.hall li::before{content:"·";color:var(--gold2);margin-right:6px;font-weight:700}
+.hall a{display:inline-block;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid rgba(255,255,255,.7);padding:11px 18px;transition:.25s}
+.hall a:hover{background:var(--gold);border-color:var(--gold)}
+.hall .soon{position:absolute;inset:0;display:grid;place-items:center;z-index:1;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.4)}
 
 /* ayrıcalıklar */
 .perks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:54px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -399,10 +405,11 @@ const PERKS = [
   ["Otopark ve Asansör","Misafirleriniz için otopark ve salonlara asansörle kolay ulaşım.","M5 17h14M6 17l1.500-6h9L18 17M7 17v2m10-2v2M8 11l1-4h6l1 4"],
   ["Mescit ve Konfor","Mescit, klima ve havalandırma sistemi, kesintisiz enerji için jeneratör.","M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"]
 ];
+/* [ad, kapasite, tanıtım, dikey video, kapak görseli]: videosu olmayan salonda son ikisi boş kalır */
 const HALLS = [
-  ["Salon Asya","1.000","Geniş dans pisti ve modern sahnesiyle kalabalık düğün, nişan, kına ve kurumsal davetler için en büyük salonumuz.","img/salon-asya.jpg"],
-  ["Havuzlu Teras Salon","700","Yarı açık, yarı kapalı mimarisi ve havuz başı konseptiyle düğün, nişan, kına ve kokteyller için.","img/galeri-1.jpg"],
-  ["Salon Avrupa","500","Düğün, nişan, kına, sünnet ve mezuniyet gibi daha samimi davetler için ideal ölçüde.","img/salon-avrupa.jpg"]
+  ["Salon Asya","1.000","Geniş dans pisti ve modern sahnesiyle kalabalık davetler için en büyük salonumuz.","img/salon-asya.mp4","img/salon-asya.jpg"],
+  ["Havuzlu Teras Salon","700","Yarı açık, yarı kapalı mimarisi ve havuz başı konseptiyle açık hava davetleri için.","img/hero.mp4","img/hero.jpg"],
+  ["Salon Avrupa","500","Düğün, nişan, kına ve mezuniyet gibi daha samimi davetler için ideal ölçüde.","",""]
 ];
 const GALLERY = ["img/galeri-1.jpg","img/galeri-2.jpg","img/galeri-3.jpg","img/galeri-4.jpg","img/galeri-5.jpg","img/galeri-6.jpg","img/galeri-7.jpg","img/galeri-8.jpg"];
 /* Gerçek müşteri yorumlarını buraya ekleyin: ["Yorum metni","Ad Soyad · Düğün"] */
@@ -428,8 +435,10 @@ $$("[data-img]").forEach(e=>fill(e,e.dataset.img,"Beyzam Davet salonu"));
   v.poster=m?"img/hero.jpg":"img/hero-yatay.jpg";v.src=m?"img/hero.mp4":"img/hero-yatay.mp4"})();
 
 $("#services").innerHTML=SERVICES.map(s=>`<article class="card reveal"><div class="ph" data-s="${s[2]}">${s[0]}</div><div class="body"><h3>${s[0]}</h3><p>${s[1]}</p><a href="#iletisim" data-pick="${s[0]}">Teklif Al</a></div></article>`).join("");
-$("#halls").innerHTML=HALLS.map(h=>`<article class="card hall reveal"><span class="cap"><b>${h[1]}</b>kişi</span><div class="ph" data-h="${h[3]}">${h[0]}</div><div class="body"><h3>${h[0]}</h3><p>${h[2]}</p><ul><li>Salona özel mutfak</li><li>Gelin odası</li><li>Ses ve ışık sistemi</li></ul><a href="#iletisim" data-hall="${h[0]}">Bu Salon İçin Teklif Al</a></div></article>`).join("");
-$$("[data-h]").forEach(e=>fill(e,e.dataset.h,e.textContent));
+$("#halls").innerHTML=HALLS.map(h=>`<article class="hall reveal">${h[3]?`<video muted loop playsinline preload="none" poster="${h[4]}" data-src="${h[3]}"></video>`:`<span class="soon">Video yakında</span>`}<div><h3>${h[0]}</h3><span class="cap">${h[1]} kişi</span></div><div><p>${h[2]}</p><ul><li>Özel mutfak</li><li>Gelin odası</li><li>Ses ve ışık</li></ul><a href="#iletisim" data-hall="${h[0]}">Teklif Al</a></div></article>`).join("");
+/* Salon videoları yalnızca ekrandayken oynar */
+const vio=new IntersectionObserver(es=>es.forEach(x=>{const v=x.target;if(x.isIntersecting){if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{})}else v.pause()}),{threshold:.25});
+$$(".hall video").forEach(v=>vio.observe(v));
 $$("[data-s]").forEach(e=>fill(e,e.dataset.s,e.textContent+" organizasyonu"));
 $("#perks").innerHTML=PERKS.map(p=>`<div class="perk reveal"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="${p[2]}"/></svg><h3>${p[0]}</h3><p>${p[1]}</p></div>`).join("");
 $("#gal").innerHTML=GALLERY.map((g,i)=>`<div class="ph" data-g="${g}">Fotoğraf ${i+1}</div>`).join("");
