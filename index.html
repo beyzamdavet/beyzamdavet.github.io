@@ -378,7 +378,7 @@ const PERKS = [
   ["Deneyimli Ekip","Karşılamadan uğurlamaya kadar güler yüzlü ve ilgili servis.","M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-8 9a8 8 0 0 1 16 0"],
   ["Havuzlu Teras","Şehir manzaralı, ışıklarla süslenen havuzlu terasta açık hava daveti.","M12 21s-7-4.500-7-10a4 4 0 0 1 7-2.600A4 4 0 0 1 19 11c0 5.500-7 10-7 10z"]
 ];
-const GALLERY = ["img/galeri-1.jpg","img/galeri-2.jpg","img/galeri-3.jpg","img/galeri-4.jpg","img/galeri-5.jpg","img/galeri-6.jpg","img/galeri-7.jpg","img/galeri-8.jpg"];
+const GALLERY = ["img/galeri-1.jpg","img/galeri-2.jpg","img/galeri-3.jpg","img/galeri-4.jpg","img/galeri-5.jpg","img/galeri-6.jpg","img/img/galeri-7.jpg","img/img/galeri-8.jpg"];
 /* Gerçek müşteri yorumlarını buraya ekleyin: ["Yorum metni","Ad Soyad · Düğün"] */
 const REVIEWS = [];
 /* ============================================================================ */
@@ -399,7 +399,7 @@ $$("[data-img]").forEach(e=>fill(e,e.dataset.img,"Beyzam Davet salonu"));
 /* Geniş ekranda yatay video, telefonda dikey video */
 (()=>{const m=matchMedia("(max-width:760px) and (orientation:portrait)").matches,v=$("#herovid");
   v.onerror=()=>{if(!m&&!v.dataset.fb){v.dataset.fb=1;v.poster="img/hero.jpg";v.src="img/hero.mp4"}};
-  v.poster=m?"img/hero.jpg":"img/hero-yatay.jpg";v.src=m?"img/hero.mp4":"img/hero-yatay.mp4"})();
+  v.poster=m?"img/hero.jpg":"img/img/hero-yatay.jpg";v.src=m?"img/hero.mp4":"img/img/hero-yatay.mp4"})();
 
 $("#services").innerHTML=SERVICES.map(s=>`<article class="card reveal"><div class="ph" data-s="${s[2]}">${s[0]}</div><div class="body"><h3>${s[0]}</h3><p>${s[1]}</p><a href="#iletisim" data-pick="${s[0]}">Teklif Al</a></div></article>`).join("");
 $$("[data-s]").forEach(e=>fill(e,e.dataset.s,e.textContent+" organizasyonu"));
