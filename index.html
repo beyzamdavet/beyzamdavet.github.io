@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Beyzam Davet ve Balo Salonları | Düğün, Nişan, Kına</title>
-<meta name="description" content="Beyzam Davet; düğün, nişan, kına, nikah ve özel davetleriniz için şık ve özenli bir davet salonu. Hemen teklif alın.">
+<meta name="description" content="Beyzam Davet ve Balo Salonları, Sefaköy Ekici24: Salon Asya (1.000 kişi), Havuzlu Teras Salon (700 kişi) ve Salon Avrupa (500 kişi). Düğün, nişan, kına için teklif alın.">
 <link rel="canonical" href="https://beyzamdavet.com/">
 <meta property="og:title" content="Beyzam Davet | Düğün, Nişan ve Kına Salonu">
 <meta property="og:description" content="En özel gününüz için şık bir salon, özenli bir ekip.">
@@ -102,6 +102,15 @@ header.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,253,.95);bac
 .card h3{font-size:1.7rem;margin-bottom:8px}
 .card p{color:var(--muted);font-size:.96rem;font-weight:300}
 .card a{display:inline-block;margin-top:16px;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px}
+
+/* salonlar */
+.hall{text-align:left;position:relative}
+.hall .ph{aspect-ratio:4/3;height:auto;font-family:var(--serif);font-size:1.5rem;letter-spacing:.06em;text-transform:none}
+.hall .cap{position:absolute;top:16px;left:16px;z-index:2;background:var(--paper);padding:8px 14px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.hall .cap b{font-family:var(--serif);font-size:1.25rem;color:var(--gold);letter-spacing:0;margin-right:4px}
+.hall ul{list-style:none;margin-top:14px;border-top:1px solid var(--line);padding-top:12px;font-size:.9rem;color:var(--muted)}
+.hall li{padding:3px 0 3px 18px;position:relative}
+.hall li::before{content:"";position:absolute;left:0;top:.78em;width:8px;height:1px;background:var(--gold)}
 
 /* ayrıcalıklar */
 .perks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:54px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
@@ -217,10 +226,10 @@ footer .logo{color:#fff;display:block;margin-bottom:14px}
     <a href="#top" class="logo"><img src="img/logo.png" alt="Beyzam Davet ve Balo Salonları" width="150" height="57"></a>
     <ul class="menu" id="menu">
       <li><a href="#hakkimizda">Hakkımızda</a></li>
+      <li><a href="#salonlar">Salonlar</a></li>
       <li><a href="#hizmetler">Hizmetler</a></li>
       <li><a href="#ayricaliklar">Ayrıcalıklar</a></li>
       <li><a href="#galeri">Galeri</a></li>
-      <li><a href="#yorumlar">Yorumlar</a></li>
       <li><a href="#iletisim">İletişim</a></li>
     </ul>
     <a href="#iletisim" class="btn fill">Teklif Al</a>
@@ -244,10 +253,10 @@ footer .logo{color:#fff;display:block;margin-bottom:14px}
 
 <section class="strip">
   <div class="wrap">
-    <div><b>Havuzlu</b><small>Teras</small></div>
     <div><b>3</b><small>Farklı Salon</small></div>
-    <div><b>Ücretsiz</b><small>Otopark</small></div>
-    <div><b>7 / 24</b><small>WhatsApp Destek</small></div>
+    <div><b>2.200</b><small>Kişilik Toplam Kapasite</small></div>
+    <div><b>Havuzlu</b><small>Teras Salon</small></div>
+    <div><b>Özel</b><small>Mutfak &amp; Gelin Odası</small></div>
   </div>
 </section>
 
@@ -257,10 +266,19 @@ footer .logo{color:#fff;display:block;margin-bottom:14px}
     <div class="reveal">
       <span class="eyebrow">Hakkımızda</span>
       <h2>Unutulmayacak davetlerin adresi</h2>
-      <p>Beyzam Davet ve Balo Salonları olarak Küçükçekmece Ekici24 Mall'da, üç farklı salonumuz ve havuzlu terasımızla hayatınızın en değerli anlarına ev sahipliği yapıyoruz.</p>
-      <p>Salon düzeninden ikrama, ses ve ışık sisteminden karşılamaya kadar tüm süreci sizin adınıza planlıyor; gününüzün sorunsuz geçmesi için baştan sona yanınızda oluyoruz.</p>
-      <a href="#iletisim" class="btn line">Salonu Ziyaret Edin</a>
+      <p>Beyzam Davet ve Balo Salonları olarak Küçükçekmece Ekici24 Mall'da, toplam 2.200 kişi kapasiteli üç salonumuzla hayatınızın en değerli anlarına ev sahipliği yapıyoruz: Salon Asya, Havuzlu Teras Salon ve Salon Avrupa.</p>
+      <p>Her salonumuzun kendine ait mutfağı, gelin odası, ses ve ışık sistemi var. Salon düzeninden ikrama kadar tüm süreci sizin adınıza planlıyor, gününüzün sorunsuz geçmesi için baştan sona yanınızda oluyoruz.</p>
+      <a href="#salonlar" class="btn line">Salonlarımızı İnceleyin</a>
     </div>
+  </div>
+</section>
+
+<section class="halls center" id="salonlar">
+  <div class="wrap">
+    <span class="eyebrow">Salonlarımız</span>
+    <h2>Üç salon, tek adres</h2>
+    <p class="lead">Davetinizin büyüklüğüne ve tarzına göre size en uygun salonu birlikte seçelim.</p>
+    <div class="grid3" id="halls"></div>
   </div>
 </section>
 
@@ -291,7 +309,7 @@ footer .logo{color:#fff;display:block;margin-bottom:14px}
   </div>
 </section>
 
-<section class="center" id="yorumlar">
+<section class="center" id="yorumlar" hidden>
   <div class="wrap">
     <span class="eyebrow">Misafirlerimiz Ne Diyor?</span>
     <h2>Memnuniyetiniz önceliğimiz</h2>
@@ -319,7 +337,10 @@ footer .logo{color:#fff;display:block;margin-bottom:14px}
         <select name="tur"><option>Düğün</option><option>Nişan</option><option>Kına</option><option>Nikah</option><option>Sünnet</option><option>Kurumsal / Diğer</option></select>
       </label>
       <label>Tarih<input name="tarih" type="date"></label>
-      <label class="full">Kişi Sayısı<input name="kisi" type="number" min="1" placeholder="Örn. 300"></label>
+      <label>Salon
+        <select name="salon"><option>Fark etmez</option><option>Salon Asya</option><option>Havuzlu Teras Salon</option><option>Salon Avrupa</option></select>
+      </label>
+      <label>Kişi Sayısı<input name="kisi" type="number" min="1" placeholder="Örn. 300"></label>
       <label class="full">Notunuz<textarea name="not" rows="3"></textarea></label>
       <div class="full"><button class="btn fill" type="submit">WhatsApp ile Gönder</button></div>
       <p class="note full">Gönder'e bastığınızda WhatsApp açılır ve mesajınız hazır gelir.</p>
@@ -334,10 +355,10 @@ footer .logo{color:#fff;display:block;margin-bottom:14px}
   <div class="wrap">
     <div>
       <a href="#top" class="logo"><img src="img/logo-beyaz.png" alt="Beyzam Davet ve Balo Salonları" width="170" height="65"></a>
-      <p>Küçükçekmece'de düğün, nişan, kına ve özel davetleriniz için üç farklı salon ve havuzlu teras.</p>
+      <p>Küçükçekmece'de düğün, nişan, kına ve özel davetleriniz için 2.200 kişi kapasiteli üç salon.</p>
     </div>
     <div><h4>Hizmetler</h4><ul><li><a href="#hizmetler">Düğün</a></li><li><a href="#hizmetler">Nişan &amp; Söz</a></li><li><a href="#hizmetler">Kına</a></li><li><a href="#hizmetler">Nikah</a></li></ul></div>
-    <div><h4>Site</h4><ul><li><a href="#hakkimizda">Hakkımızda</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#yorumlar">Yorumlar</a></li><li><a href="#iletisim">İletişim</a></li></ul></div>
+    <div><h4>Site</h4><ul><li><a href="#hakkimizda">Hakkımızda</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#salonlar">Salonlar</a></li><li><a href="#iletisim">İletişim</a></li></ul></div>
     <div><h4>İletişim</h4><ul><li><a data-tel data-f="phoneText"></a></li><li data-f="address"></li><li><a data-ig target="_blank" rel="noopener">Instagram</a></li></ul></div>
   </div>
   <div class="copy">© <span id="yil"></span> Beyzam Davet ve Balo Salonları. Tüm hakları saklıdır.</div>
@@ -372,11 +393,16 @@ const SERVICES = [
 ];
 const PERKS = [
   ["Şık Dekorasyon","Her organizasyona göre uyarlanan masa, sahne ve çiçek düzeni.","M12 3l2.500 5.500L20 9.300l-4 4 1 5.700-5-2.800-5 2.800 1-5.700-4-4 5.500-.800z"],
-  ["Ses ve Işık Sistemi","Profesyonel ses düzeni, sahne ışıkları ve görsel şovlar.","M9 18V5l11-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm11-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"],
-  ["Ücretsiz Otopark","Misafirleriniz için salonun yanında rahat park imkânı.","M5 17h14M6 17l1.500-6h9L18 17M7 17v2m10-2v2M8 11l1-4h6l1 4"],
-  ["Lezzetli İkramlar","Yemekli, kokteyl ve pasta-meşrubat seçenekleriyle zengin menüler.","M4 11h16a8 8 0 0 1-16 0zM12 3v4M8 4v3m8-3v3M3 20h18"],
-  ["Deneyimli Ekip","Karşılamadan uğurlamaya kadar güler yüzlü ve ilgili servis.","M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-8 9a8 8 0 0 1 16 0"],
-  ["Havuzlu Teras","Şehir manzaralı, ışıklarla süslenen havuzlu terasta açık hava daveti.","M12 21s-7-4.500-7-10a4 4 0 0 1 7-2.600A4 4 0 0 1 19 11c0 5.500-7 10-7 10z"]
+  ["Ses ve Işık Sistemi","Her salonda ayrı ses düzeni, sahne ışıkları ve görsel şovlar.","M9 18V5l11-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm11-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"],
+  ["Her Salona Özel Mutfak","İkramlar, salonunuza ait mutfakta hazırlanıp sıcak servis edilir.","M4 11h16a8 8 0 0 1-16 0zM12 3v4M8 4v3m8-3v3M3 20h18"],
+  ["Gelin Odası","Her salonda hazırlık ve dinlenme için ayrılmış özel gelin odası.","M12 21s-7-4.500-7-10a4 4 0 0 1 7-2.600A4 4 0 0 1 19 11c0 5.500-7 10-7 10z"],
+  ["Otopark ve Asansör","Misafirleriniz için otopark ve salonlara asansörle kolay ulaşım.","M5 17h14M6 17l1.500-6h9L18 17M7 17v2m10-2v2M8 11l1-4h6l1 4"],
+  ["Mescit ve Konfor","Mescit, klima ve havalandırma sistemi, kesintisiz enerji için jeneratör.","M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"]
+];
+const HALLS = [
+  ["Salon Asya","1.000","Geniş dans pisti ve modern sahnesiyle kalabalık düğün, nişan, kına ve kurumsal davetler için en büyük salonumuz.","img/salon-asya.jpg"],
+  ["Havuzlu Teras Salon","700","Yarı açık, yarı kapalı mimarisi ve havuz başı konseptiyle düğün, nişan, kına ve kokteyller için.","img/galeri-1.jpg"],
+  ["Salon Avrupa","500","Düğün, nişan, kına, sünnet ve mezuniyet gibi daha samimi davetler için ideal ölçüde.","img/salon-avrupa.jpg"]
 ];
 const GALLERY = ["img/galeri-1.jpg","img/galeri-2.jpg","img/galeri-3.jpg","img/galeri-4.jpg","img/galeri-5.jpg","img/galeri-6.jpg","img/galeri-7.jpg","img/galeri-8.jpg"];
 /* Gerçek müşteri yorumlarını buraya ekleyin: ["Yorum metni","Ad Soyad · Düğün"] */
@@ -402,10 +428,13 @@ $$("[data-img]").forEach(e=>fill(e,e.dataset.img,"Beyzam Davet salonu"));
   v.poster=m?"img/hero.jpg":"img/hero-yatay.jpg";v.src=m?"img/hero.mp4":"img/hero-yatay.mp4"})();
 
 $("#services").innerHTML=SERVICES.map(s=>`<article class="card reveal"><div class="ph" data-s="${s[2]}">${s[0]}</div><div class="body"><h3>${s[0]}</h3><p>${s[1]}</p><a href="#iletisim" data-pick="${s[0]}">Teklif Al</a></div></article>`).join("");
+$("#halls").innerHTML=HALLS.map(h=>`<article class="card hall reveal"><span class="cap"><b>${h[1]}</b>kişi</span><div class="ph" data-h="${h[3]}">${h[0]}</div><div class="body"><h3>${h[0]}</h3><p>${h[2]}</p><ul><li>Salona özel mutfak</li><li>Gelin odası</li><li>Ses ve ışık sistemi</li></ul><a href="#iletisim" data-hall="${h[0]}">Bu Salon İçin Teklif Al</a></div></article>`).join("");
+$$("[data-h]").forEach(e=>fill(e,e.dataset.h,e.textContent));
 $$("[data-s]").forEach(e=>fill(e,e.dataset.s,e.textContent+" organizasyonu"));
 $("#perks").innerHTML=PERKS.map(p=>`<div class="perk reveal"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="${p[2]}"/></svg><h3>${p[0]}</h3><p>${p[1]}</p></div>`).join("");
 $("#gal").innerHTML=GALLERY.map((g,i)=>`<div class="ph" data-g="${g}">Fotoğraf ${i+1}</div>`).join("");
 $$("[data-g]").forEach(e=>fill(e,e.dataset.g,"Beyzam Davet galeri"));
+if(REVIEWS.length)$("#yorumlar").hidden=false;
 $("#quotes").innerHTML=REVIEWS.length
   ? REVIEWS.map(r=>`<blockquote class="quote reveal"><div class="stars">★★★★★</div><p>${r[0]}</p><cite>${r[1]}</cite></blockquote>`).join("")
   : `<p class="lead" style="grid-column:1/-1;margin:0 auto">Misafir yorumlarımız çok yakında burada yer alacak.</p>`;
@@ -413,9 +442,11 @@ $("#quotes").innerHTML=REVIEWS.length
 /* Hizmet kartından forma tür aktar */
 $$("[data-pick]").forEach(a=>a.addEventListener("click",()=>{const o=[...$("#form").tur.options].find(o=>a.dataset.pick.startsWith(o.text.split(" ")[0]));if(o)$("#form").tur.value=o.text}));
 
+$$("[data-hall]").forEach(a=>a.addEventListener("click",()=>{$("#form").salon.value=a.dataset.hall}));
+
 /* Form → WhatsApp */
 $("#form").addEventListener("submit",e=>{e.preventDefault();const f=e.target;
-  const t=["Merhaba, teklif almak istiyorum.","Ad Soyad: "+f.ad.value,"Telefon: "+f.tel.value,"Organizasyon: "+f.tur.value,
+  const t=["Merhaba, teklif almak istiyorum.","Ad Soyad: "+f.ad.value,"Telefon: "+f.tel.value,"Organizasyon: "+f.tur.value,"Salon: "+f.salon.value,
     f.tarih.value&&"Tarih: "+f.tarih.value.split("-").reverse().join("."),f.kisi.value&&"Kişi sayısı: "+f.kisi.value,f.not.value&&"Not: "+f.not.value].filter(Boolean).join("\n");
   window.open(wa(t),"_blank","noopener")});
 
